@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#titulo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+body{
+   background-color: darkmagenta;
+   margin-top: 0; 
+  padding-top: 20px; 
+  text-align: center;
+}
+
+#formulario-atividade {
+    text-align: center; 
+  }
+  
+  #formulario-atividade label {
+    display: block; 
+    margin-bottom: 10px; 
+    padding: 20px;
+    color:white;
+}
+  
+  #formulario-atividade textarea,
+  #formulario-atividade input[type="submit"],
+  #formulario-atividade input[type="reset"] {
+    display: block; 
+    margin: 0 auto 20px; 
+    padding: 20px;
+    width: 300px;                                                                                                                                                                                                                           
+    border: 1px;
+    background-color: hotpink;
+    color: white;
+}
+  #lista-atividades{
+    color: aliceblue;
+  }

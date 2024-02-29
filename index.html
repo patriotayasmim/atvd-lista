@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1 id="titulo">Lista da Yasmim</h1>
+    <main id="atividade">
+       
+        <form id="formulario-atividade" onsubmit="return CarregarAtividade()" method="post">
+          <label for="message">Adicione a sua atividade:</label>
+          <textarea id="message" name="message" pattern="^[A-Za-zÀ-ú\s]+$" required></textarea>
+          <input type="submit" value="Enviar" id="enviar">
+          <input type="reset" value="Limpar Atividade" id="apagar">
+        </form>
+        
+        <ul
+        id="lista-atividades">
+        </ul>
+        
+    </main>
+    <script>
+      function CarregarAtividade() {
+        var forms = document.getElementById('formulario-atividade');
+        var mensagem = document.getElementById('message').value;
+        var listaAtividades = document.getElementById('lista-atividades');
+        var novaAtividade = document.createElement('li');
+        novaAtividade.textContent = mensagem;
+
+        var botaoRemover = document.createElement('button');
+        botaoRemover.textContent = 'Remover';
+        botaoRemover.onclick = function() {
+          listaAtividades.removeChild(novaAtividade);
+        };
+        novaAtividade.appendChild(botaoRemover);
+
+        listaAtividades.appendChild(novaAtividade);
+        alert('Atividade adicionada a lista!');
+        forms.reset();
+        return false;
+       }
+    </script>
+</body>
+</html>
